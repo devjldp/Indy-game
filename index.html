@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+<body onload="inicializa()">
+  <div class="text-center">
+    <h2>The Front-End Level</h2>
+    <canvas id="miCanvas"></canvas>
+  </div>
+
+  <div id="imagen-descripcion-container">
+    <div id="imagen-descripcion-content">
+      <h3 id="title"> </h3>
+      <button id="cerrar-btn">&times;</button>
+      <img id="imagen-grande" src="" alt="Imagen en grande">
+      <div id="descripcion-proyecto"></div>
+      Links: <br>
+      <a href='' class="enlace-proyecto" id="live-deploy" target="_blank" >Live website</a><br>
+      <a href='' class="enlace-proyecto" id="github-deploy" target="_blank" >GitHub</a>
+    </div>
+  </div>
+
+  <div id="door-container">
+    <button id="btn-clue">x</button>
+    <div id="door-content">
+      
+        <p id="clue">If the door you seek to pry, <br>
+          First the key you must apply!!
+        </p>
+      
+    </div>
+  </div>
+  <script src="./js/juego.js"></script>
+  
+</body>
+</html>

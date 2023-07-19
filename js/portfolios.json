@@ -1,0 +1,17 @@
+{
+  "10": {
+    "title":"Wedding: Wishes and Dreams",
+    "imagen": "../images/portfolios/wedding.png",
+    "descripcion": "<p class=\"text-left\"> Wedding: Whises and Dreams. This is a website project created for a fictional wedding planning company based in Cardiff, as part of the CodeInstitute course. </p>\n<h4 class=\"text-left\">Tools</h4>\n<ul class=\"no-style text-left\">\n<li>HTML</li>\n<li>CSS</li>\n<li>Bootstrap</li>\n</ul>",
+    "enlace": "https://devjldp.github.io/CodeInstitute_Project1/index.html",
+    "github": "https://github.com/devjldp/CodeInstitute_Project1"
+  },
+  "11": {
+    "title":"Calculator",
+    "imagen": "../images/portfolios/myCalculator.png",
+    "descripcion": "<p class=\"text-left\"> This is a small project. Create a basic calculator in Javascript. </p>\n<h4 class=\"text-left\">Tools</h4>\n<ul class=\"no-style text-left\">\n<li>Javascript</li>\n<li>CSS</li>\n<li>HTML</li>\n</ul>",
+    "enlace": "https://devjldp.github.io/8.-Improving-calculator/",
+    "github": "https://github.com/devjldp/8.-Improving-calculator"
+  }
+}
+
