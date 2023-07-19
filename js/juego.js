@@ -251,15 +251,16 @@ btnClue.addEventListener('click',() => {
   document.getElementById('door-container').style.display = 'none';
 });
 
-const inicializa = () => {
+window.addEventListener("DOMContentLoaded", (event) => {
   miCanvas = document.getElementById('miCanvas');
   ctx = miCanvas.getContext('2d');
   // This function updates the initialize method by calling another method.
   setInterval(() => {
     principal();
   },1000/fps);
+})
 
-}
+
 
 const principal = () => {
   borrarCanvas();
