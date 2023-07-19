@@ -4,7 +4,7 @@ let widthX = 50;
 let heightY = 50;
 
 // src images characters 
-let characterSrc = ['../images/indy.png','../images/mummy.png']
+let characterSrc = ['./docs/images/indy.png','./docs/images/mummy.png']
 
 //heroe class
 class Heroe{
@@ -169,24 +169,15 @@ let enemy1 = new Enemy(100,200,characterSrc[1]);
 let enemy2 = new Enemy(300,50,characterSrc[1]);
 
 // Tiles creating images
-let pathabsolute = 'https://devjldp.github.io'
+
 let wall = new Image();
-wall.src = pathabsolute+'/images/wall.png'
+wall.src = './docs/images/wall.png'
 let door = new Image();
-door.onload = () =>{
-  console.log("Imagen Cargada")
-}
-door.src = pathabsolute+'/images/door.png'
+door.src = './docs/images/door.png'
 let path = new Image();
-path.onload = () =>{
-  console.log("Imagen Cargada")
-}
-path.src = pathabsolute+'/images/path3.png'
+path.src = './docs/images/path3.png'
 let key = new Image();
-key.onload = () =>{
-  console.log("Imagen Cargada")
-}
-key.src = pathabsolute+'/images/key.png'
+key.src = './docs/images/key.png'
 
 let images = {
   10 : 'weddingTile',
@@ -196,7 +187,7 @@ let images = {
 // Function to draw a tile
 const drawTileImage = (key,i,j) => {
   let image = new Image();
-  let src = '../images/';
+  let src = './docs/images/';
   key >= 10 ? src += 'portfolios/' : null;
   image.src = src + images[key]+'.png';
   ctx.drawImage(image, j*heightY, i*widthX);
@@ -227,16 +218,14 @@ const drawBoard = () => {
   for(let i=0; i<10;i++){
     for(let j = 0; j<15; j++){
       if (board[i][j] == 0){
-        const relativeUrl = '../images/wall.png';
-        const absoluteUrl = new URL(relativeUrl, window.location.href).href;
-        console.log('Ruta Absoluta:', absoluteUrl);
-        ctx.drawImage(wall,j*heightY, i*widthX)
+        ctx.drawImage(wall,j*heightY, i*widthX);
+        
       }else if (board[i][j] == 1){
-        ctx.drawImage(door,j*heightY, i*widthX)
+        ctx.drawImage(door,j*heightY, i*widthX);
       }else if (board[i][j] == 2){
-        ctx.drawImage(path,j*heightY, i*widthX)
+        ctx.drawImage(path,j*heightY, i*widthX);
       }else if (board[i][j] == 3){
-        ctx.drawImage(key,j*heightY, i*widthX)
+        ctx.drawImage(key,j*heightY, i*widthX);
       }else if(board[i][j] >= 10){
         let key = board[i][j];       
         drawTileImage(key,i,j);
@@ -263,6 +252,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   miCanvas = document.getElementById('miCanvas');
   ctx = miCanvas.getContext('2d');
   // This function updates the initialize method by calling another method.
+  
   setInterval(() => {
     principal();
   },1000/fps);
