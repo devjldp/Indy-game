@@ -222,6 +222,7 @@ const drawBoard = () => {
   for(let i=0; i<10;i++){
     for(let j = 0; j<15; j++){
       if (board[i][j] == 0){
+        console.log(wall)
         ctx.drawImage(wall,j*heightY, i*widthX)
       }else if (board[i][j] == 1){
         ctx.drawImage(door,j*heightY, i*widthX)
