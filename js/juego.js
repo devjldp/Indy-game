@@ -169,27 +169,24 @@ let enemy1 = new Enemy(100,200,characterSrc[1]);
 let enemy2 = new Enemy(300,50,characterSrc[1]);
 
 // Tiles creating images
-
+let pathabsolute = 'https://devjldp.github.io'
 let wall = new Image();
-wall.onload = () =>{
-  console.log("Imagen Cargada")
-}
-wall.src = '../images/wall.png'
+wall.src = pathabsolute+'/images/wall.png'
 let door = new Image();
 door.onload = () =>{
   console.log("Imagen Cargada")
 }
-door.src = '../images/door.png'
+door.src = pathabsolute+'/images/door.png'
 let path = new Image();
 path.onload = () =>{
   console.log("Imagen Cargada")
 }
-path.src = '../images/path3.png'
+path.src = pathabsolute+'/images/path3.png'
 let key = new Image();
 key.onload = () =>{
   console.log("Imagen Cargada")
 }
-key.src = '../images/key.png'
+key.src = pathabsolute+'/images/key.png'
 
 let images = {
   10 : 'weddingTile',
