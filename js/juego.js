@@ -226,6 +226,28 @@ let board = [
 
 // pintar el escenario usando el array 
 
+const drawBoard = () => {
+  for(let i=0; i<10;i++){
+    for(let j = 0; j<15; j++){
+      if (board[i][j] == 0){
+        const relativeUrl = '../images/wall.png';
+        const absoluteUrl = new URL(relativeUrl, window.location.href).href;
+        console.log('Ruta Absoluta:', absoluteUrl);
+        ctx.drawImage(wall,j*heightY, i*widthX)
+      }else if (board[i][j] == 1){
+        ctx.drawImage(door,j*heightY, i*widthX)
+      }else if (board[i][j] == 2){
+        ctx.drawImage(path,j*heightY, i*widthX)
+      }else if (board[i][j] == 3){
+        ctx.drawImage(key,j*heightY, i*widthX)
+      }else if(board[i][j] >= 10){
+        let key = board[i][j];       
+        drawTileImage(key,i,j);
+        
+      } 
+    }
+  }
+}
 
 
 
@@ -243,38 +265,25 @@ btnClue.addEventListener('click',() => {
 window.addEventListener("DOMContentLoaded", (event) => {
   miCanvas = document.getElementById('miCanvas');
   ctx = miCanvas.getContext('2d');
-  const drawBoard = () => {
-    for(let i=0; i<10;i++){
-      for(let j = 0; j<15; j++){
-        if (board[i][j] == 0){
-          console.log(wall)
-          ctx.drawImage(wall,j*heightY, i*widthX)
-        }else if (board[i][j] == 1){
-          ctx.drawImage(door,j*heightY, i*widthX)
-        }else if (board[i][j] == 2){
-          ctx.drawImage(path,j*heightY, i*widthX)
-        }else if (board[i][j] == 3){
-          ctx.drawImage(key,j*heightY, i*widthX)
-        }else if(board[i][j] >= 10){
-          let key = board[i][j];       
-          drawTileImage(key,i,j);
-          
-        } 
-      }
-    }
-  }
   // This function updates the initialize method by calling another method.
   setInterval(() => {
-    borrarCanvas();
-    drawBoard();
-    indy.drawCharacter();
-    enemy1.drawCharacter()
-    enemy1.moveH(1);
-    enemy2.drawCharacter();
-    enemy2.moveV(1);
+    principal();
   },1000/fps);
 })
 
+
+
+const principal = () => {
+  borrarCanvas();
+  drawBoard();
+  indy.drawCharacter();
+  enemy1.drawCharacter()
+  enemy1.moveH(1);
+  enemy2.drawCharacter();
+  enemy2.moveV(1);
+  
+
+}
 
 const borrarCanvas = () => {
   miCanvas.width = 750;
