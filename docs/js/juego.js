@@ -92,7 +92,7 @@ class Heroe{
     }
   }
   showProject(tileNumber){
-      fetch('./js/portfolios.json')
+      fetch('./docs/js/portfolios.json')
       .then(response => response.json())
       .then(portfolio => {
           const imagenGrande = document.getElementById('imagen-grande');
