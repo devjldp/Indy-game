@@ -181,7 +181,7 @@ key.src = './docs/images/key.png'
 
 let images = {
   10 : 'weddingTile',
-  11: 'mycalculatorTile'
+  11: 'myCalculatorTile'
 }
 
 // Function to draw a tile
