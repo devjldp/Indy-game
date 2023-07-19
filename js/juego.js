@@ -171,19 +171,27 @@ let enemy2 = new Enemy(300,50,characterSrc[1]);
 // Tiles creating images
 
 let wall = new Image();
+wall.onload = () =>{
+  console.log("Imagen Cargada")
+}
 wall.src = '../images/wall.png'
 let door = new Image();
+door.onload = () =>{
+  console.log("Imagen Cargada")
+}
 door.src = '../images/door.png'
 let path = new Image();
+path.onload = () =>{
+  console.log("Imagen Cargada")
+}
 path.src = '../images/path3.png'
 let key = new Image();
+key.onload = () =>{
+  console.log("Imagen Cargada")
+}
 key.src = '../images/key.png'
 
 let images = {
-  0 : 'wall',
-  1 : 'door',
-  2 : 'path3',
-  3 : 'key',
   10 : 'weddingTile',
   11: 'mycalculatortile'
 }
